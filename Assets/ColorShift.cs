@@ -9,6 +9,7 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
     private Material myMat;
     private List<MeshRenderer> myMatAll;
     private SpriteRenderer sp;
+    private Canvas textCanvas;
 
     private float shiftValue = 204f;
     private bool shiftComplete;
@@ -16,6 +17,7 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
 
 	// Use this for initialization
 	void Start () {
+        
         if (gameObject.GetComponent<MeshRenderer>() != null)
         {
             myMat = gameObject.GetComponent<MeshRenderer>().material;
@@ -43,14 +45,14 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
 	// Update is called once per frame
 	void Update () {
         if (isIncreasing) {
-            shiftValue -= 32f;
+            shiftValue -= 16f;
             if (shiftValue <= 0) {
                 shiftValue = 0;
             }
         }
         else
         {
-            shiftValue += 32f;
+            shiftValue += 16f;
             if(shiftValue >= 204)
             {
                 shiftValue = 204;
