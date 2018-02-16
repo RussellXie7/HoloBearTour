@@ -8,7 +8,8 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
 {
     private Material myMat;
     private List<MeshRenderer> myMatAll;
-    private SpriteRenderer sp;
+    private List<SpriteRenderer> sp;
+    private List<CanvasGroup> cg;
     private Canvas textCanvas;
 
     private float shiftValue = 204f;
@@ -33,12 +34,21 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
         
         if (transform.childCount > 0)
         {
-            sp = transform.GetComponentInChildren<SpriteRenderer>();
-            Debug.Log(sp);
+            sp = new List<SpriteRenderer>();
+            cg = new List<CanvasGroup>();
+
+            foreach (SpriteRenderer s in transform.GetComponentsInChildren<SpriteRenderer>()) {
+                sp.Add(s);
+            }
+            foreach (CanvasGroup c in transform.GetComponentsInChildren<CanvasGroup>()) {
+                cg.Add(c);
+            }
+
         }
         else
         {
             sp = null;
+            cg = null;
         }
 	}
 	
@@ -72,7 +82,18 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
 
         if (sp != null)
         {
-            sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, (204.0f - shiftValue) / 204.0f);
+            foreach (SpriteRenderer sp in sp)
+            {
+                sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, (204.0f - shiftValue) / 204.0f);
+            }
+        }
+
+        if (cg != null)
+        {
+            foreach (CanvasGroup c in cg)
+            {
+                c.alpha = (204.0f - shiftValue) / 204.0f;
+            }
         }
 	}
 
