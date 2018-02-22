@@ -37,6 +37,7 @@ public class UIButtonManager : MonoBehaviour {
         bear.position = m_savedPosition;
         bear.rotation = m_savedRotation;
         bear.localScale = m_savedScale;
+        m_scaleValue = 1.0f;
     }
 
     public void OnRotateLeftDown() {
