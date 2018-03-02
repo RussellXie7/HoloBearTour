@@ -7,7 +7,7 @@ using HoloToolkit.Unity.InputModule;
 public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
 {
     private float shiftOffset = 16.0f;
-    private float USER_DISTANCE_VALUE = 0.85f;
+    private float USER_DISTANCE_VALUE = 2.1f;
 
     private Material myMat;
     private List<MeshRenderer> myMatAll;

@@ -20,16 +20,28 @@ public class BearControl : MonoBehaviour,IInputClickHandler {
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
-        if (drag.IsDraggingEnabled)
+        // drag mode with rotation -> drag mode without rotation
+        if (drag.IsDraggingEnabled && drag.RotationMode == HandDraggable.RotationModeEnum.OrientTowardUserAndKeepUpright)
+        {
+            drag.RotationMode = HandDraggable.RotationModeEnum.LockObjectRotation;
+
+            GetComponent<MeshRenderer>().material.color = Color.yellow;
+        }
+        // drag mode without rotation -> scale mode
+        else if (drag.IsDraggingEnabled && drag.RotationMode == HandDraggable.RotationModeEnum.LockObjectRotation)
         {
             drag.SetDragging(false);
             scale.SetScaling(true);
+
             GetComponent<MeshRenderer>().material.color = Color.blue;
         }
+        // scale mode -> drag mode with rotation
         else
         {
             drag.SetDragging(true);
+            drag.RotationMode = HandDraggable.RotationModeEnum.OrientTowardUserAndKeepUpright;
             scale.SetScaling(false);
+
             GetComponent<MeshRenderer>().material.color = Color.red;
         }
     }

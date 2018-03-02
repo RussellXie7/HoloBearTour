@@ -210,7 +210,7 @@ RectTransform:
   m_GameObject: {fileID: 21825391}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.06}
-  m_LocalScale: {x: 0.0064, y: 0.0064, z: 0.0064}
+  m_LocalScale: {x: 0.00588672, y: 0.00588672, z: 0.00588672}
   m_Children:
   - {fileID: 1673799043}
   - {fileID: 2079961281}
@@ -220,7 +220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.08, y: 9.08}
+  m_AnchoredPosition: {x: 13.08, y: 9.6}
   m_SizeDelta: {x: 958.834, y: 675.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &21825393
@@ -623,8 +623,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1006.29456, y: 522, z: 10}
-  m_Center: {x: 11.560618, y: 0, z: 0}
+  m_Size: {x: 657.8111, y: 522, z: 10}
+  m_Center: {x: -32.597675, y: 0, z: 0}
 --- !u!4 &150221163
 Transform:
   m_ObjectHideFlags: 0
@@ -964,8 +964,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 346974805}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 3.2900002}
-  m_LocalScale: {x: 0.005889456, y: 0.005889456, z: 0.005889456}
+  m_LocalPosition: {x: 0, y: 0, z: 7.54}
+  m_LocalScale: {x: 0.005182721, y: 0.005182721, z: 0.005182721}
   m_Children:
   - {fileID: 438901048}
   - {fileID: 1243276650}
@@ -975,7 +975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.88, y: 4.12}
+  m_AnchoredPosition: {x: -11.88, y: 4.29}
   m_SizeDelta: {x: 1402.007, y: 624.146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &346974807
@@ -1082,7 +1082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -239.7, y: 261.7}
+  m_AnchoredPosition: {x: -239.7, y: 237}
   m_SizeDelta: {x: 428.03, y: 136.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353521789
@@ -1107,7 +1107,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 62
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1118,7 +1118,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hawkinson
+  m_Text: Teddy Bear
 --- !u!222 &353521790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1154,8 +1154,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360175997}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 1.89}
-  m_LocalScale: {x: 0.005252786, y: 0.005252786, z: 0.005252786}
+  m_LocalPosition: {x: 0, y: 0, z: 2.08}
+  m_LocalScale: {x: 0.0047149006, y: 0.0047149006, z: 0.0047149006}
   m_Children:
   - {fileID: 353521788}
   - {fileID: 1913221294}
@@ -1165,7 +1165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.44, y: 4.53}
+  m_AnchoredPosition: {x: 13.53, y: 4.53}
   m_SizeDelta: {x: 958.834, y: 675.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &360175999
@@ -1460,15 +1460,15 @@ RectTransform:
   m_GameObject: {fileID: 540751164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8898929, y: 0.8898929, z: 0.8898929}
+  m_LocalScale: {x: 0.6051271, y: 0.6051271, z: 0.6051271}
   m_Children: []
   m_Father: {fileID: 360175998}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 234, y: 82}
-  m_SizeDelta: {x: 480, y: 361}
+  m_AnchoredPosition: {x: 228, y: -4}
+  m_SizeDelta: {x: 697.7, y: 981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540751166
 MonoBehaviour:
@@ -1489,7 +1489,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: efaf9b5a1b1a8de4987bfca39dec7572, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2e9e35664baf41478d24d92a4696486, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2241,7 +2241,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 843553230}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -2915,7 +2915,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1033354826}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -3073,7 +3073,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067652841}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -3389,7 +3389,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 234, y: 82}
-  m_SizeDelta: {x: 480, y: 361}
+  m_SizeDelta: {x: 432, y: 598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181090630
 MonoBehaviour:
@@ -3410,7 +3410,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: efaf9b5a1b1a8de4987bfca39dec7572, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c383c100f306e2b46a4f189c5fc17883, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3453,7 +3453,7 @@ RectTransform:
   m_GameObject: {fileID: 1220575319}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 3.2900002}
-  m_LocalScale: {x: 0.0051822388, y: 0.0051822388, z: 0.0051822388}
+  m_LocalScale: {x: 0.0061982456, y: 0.006198246, z: 0.006198246}
   m_Children:
   - {fileID: 1738428048}
   - {fileID: 1601301958}
@@ -4413,7 +4413,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1418761204}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -4677,7 +4677,7 @@ RectTransform:
   m_GameObject: {fileID: 1496298616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8898929, y: 0.8898929, z: 0.8898929}
+  m_LocalScale: {x: 0.5485373, y: 0.5485373, z: 0.5485373}
   m_Children: []
   m_Father: {fileID: 1220575320}
   m_RootOrder: 2
@@ -4685,7 +4685,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 234, y: 82}
-  m_SizeDelta: {x: 480, y: 361}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496298618
 MonoBehaviour:
@@ -4706,7 +4706,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: efaf9b5a1b1a8de4987bfca39dec7572, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b5b42aad9d57c845a680f49c8918428, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5109,9 +5109,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Born in San Francisco, Hawkinson studied at San Jose State and UCLA, and
-    now lives and works in Los Angeles. His solo exhibitions have included shows at
-    MASS MoCA and the Hirshhorn Museum and Sculpture Garden in Washington.
+  m_Text: For the Stuart Collection, Tim imagined a bear constructed of boulders.
+    Eight granite stones - torso, head, ears, arms, and legs - were found locally.
+    Together they make a bear 23'6" feet high with a total weight of 180 tons.
 --- !u!222 &1601301960
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5267,7 +5267,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hawkinson
+  m_Text: Sketch
 --- !u!222 &1673799045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5450,7 +5450,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 65
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -5461,7 +5461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hawkinson
+  m_Text: Construction
 --- !u!222 &1738428050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5677,7 +5677,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1813814330}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -5718,7 +5718,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816253760}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -6552,7 +6552,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2001160225}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -6782,9 +6782,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Born in San Francisco, Hawkinson studied at San Jose State and UCLA, and
-    now lives and works in Los Angeles. His solo exhibitions have included shows at
-    MASS MoCA and the Hirshhorn Museum and Sculpture Garden in Washington.
+  m_Text: 'First proposed in 2001, assembly of the sculpture took place onsite in
+    May 2005 and the landscaping was completed in November 2005. Bear looks simple
+    but was a sophisticated transportation and engineering feat. '
 --- !u!222 &2079961283
 CanvasRenderer:
   m_ObjectHideFlags: 0
