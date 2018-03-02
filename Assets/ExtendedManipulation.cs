@@ -27,7 +27,7 @@ public class ExtendedManipulation : MonoBehaviour,IFocusable, IInputHandler, ISo
 
 
     [Tooltip("Maximum Scale You Want")]
-    public float MaxScale = 10f;
+    public float MaxScale = 100f;
 
 
     [Tooltip("Minimum Scale You Want")]
@@ -158,7 +158,7 @@ public class ExtendedManipulation : MonoBehaviour,IFocusable, IInputHandler, ISo
         float scaleOffset = 10;
         float scaleFactor = 1;
 
-        scaleFactor = h_diff * scaleOffset + scaleFactor;
+        scaleFactor = ( h_diff * scaleOffset ) + scaleFactor;
 
         float targetScale = scaleFactor * startScale;
 
