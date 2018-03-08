@@ -4,7 +4,7 @@ using UnityEngine;
 using HoloToolkit.Unity;
 using HoloToolkit.Unity.InputModule;
 
-public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
+public class ColorShift : MonoBehaviour,IFocusable
 {
     private float shiftOffset = 16.0f;
     private float USER_DISTANCE_VALUE = 3f;
@@ -17,7 +17,6 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
     private CanvasGroup closeInfo;
 
     private float shiftValue = 204f;
-    private bool shiftComplete;
     private bool isIncreasing;
     private float user_distance;
 
@@ -291,13 +290,4 @@ public class ColorShift : MonoBehaviour,IFocusable, ISourceStateHandler
         isIncreasing = false;
     }
 
-    public void OnSourceDetected(SourceStateEventData eventData)
-    {
-        // Nothing to do
-    }
-
-    public void OnSourceLost(SourceStateEventData eventData)
-    {
-        isIncreasing = false;
-    }
 }

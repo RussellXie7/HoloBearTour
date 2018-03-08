@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using HoloToolkit.Unity.InputModule;
-public class BearControl : MonoBehaviour,IInputClickHandler {
+public class BearControl : MonoBehaviour,IInputClickHandler
+{
 
     private HandDraggable drag;
     private ExtendedManipulation scale;
     
-    void Awake()
-    {
-        Application.targetFrameRate = 30;
-    }
-
 	// Use this for initialization
 	void Start () {
         drag = GameObject.Find("bear").GetComponent<HandDraggable>();
@@ -45,9 +41,8 @@ public class BearControl : MonoBehaviour,IInputClickHandler {
             GetComponent<MeshRenderer>().material.color = Color.red;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
