@@ -8,13 +8,15 @@ public class ConnectLines : MonoBehaviour, IInputClickHandler
     private bool isConnectingLines;
     private Color myColor;
 
+
     public Color c1 = Color.yellow;
     public Color c2 = Color.red;
 
     public Transform cube1;
     public Transform cube2;
 
-
+    public Material material;
+    public Transform anchor;
 
     // Use this for initialization
     void Start () {
@@ -22,7 +24,7 @@ public class ConnectLines : MonoBehaviour, IInputClickHandler
         myColor = transform.GetComponent<MeshRenderer>().material.color;
 
         LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
-        lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+        lineRenderer.material = material;
         lineRenderer.widthMultiplier = 0.05f;
         lineRenderer.positionCount = 3;
 
@@ -48,7 +50,7 @@ public class ConnectLines : MonoBehaviour, IInputClickHandler
                 lineRenderer.enabled = true;
             }
 
-            lineRenderer.SetPosition(0, (Camera.main.transform.position - new Vector3(0, 0.1f, 0)));
+            lineRenderer.SetPosition(0, (anchor.position));
             
             if(Vector3.Distance(Camera.main.transform.position, cube1.position) > Vector3.Distance(Camera.main.transform.position, cube2.position))
             {
