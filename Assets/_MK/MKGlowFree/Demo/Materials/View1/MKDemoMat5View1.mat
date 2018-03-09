@@ -28,9 +28,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _MKGlowOffSet: 0
-    - _MKGlowPower: 1.66
+    - _MKGlowPower: 2.3
     - _MKGlowTexStrength: 10
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _MKGlowColor: {r: 1, g: 0.39310336, b: 0, a: 1}
-    - _MKGlowTexColor: {r: 1, g: 0.43448272, b: 0, a: 1}
+    - _MKGlowTexColor: {r: 0.71323526, g: 0.22134888, b: 0, a: 1}
