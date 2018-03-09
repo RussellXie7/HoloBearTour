@@ -7,10 +7,12 @@ public class ControlCenter : MonoBehaviour, ISourceStateHandler {
 
     private List<GameObject> allChildren;
 
+#if UNITY_EDITOR
     void Awake()
     {
         Application.targetFrameRate = 30;
     }
+#endif
 
     // Use this for initialization
     void Start () {
@@ -21,7 +23,9 @@ public class ControlCenter : MonoBehaviour, ISourceStateHandler {
         {
             allChildren.Add(c.gameObject);
         }
-	}
+
+        // DisableAllChildren();
+    }
 	
 	// Update is called once per frame
 	void Update () {

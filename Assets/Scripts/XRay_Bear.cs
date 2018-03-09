@@ -10,7 +10,7 @@ public class XRay_Bear : MonoBehaviour, IFocusable {
 
     private bool isDecreasing;
     private float max = 1.0f;
-    private float min = 0.5f;
+    private float min = 0.35f;
     private float opacity = 1;
     
     private int bodyPartCount = 7;

@@ -74,7 +74,7 @@ public class PortalControl : MonoBehaviour, IFocusable {
 	
     private void UIHiding(float distance)
     {
-        if(distance < 1.5f)
+        if(distance < 0.7f)
         {
             if (!isUserClose)
             {
@@ -146,9 +146,8 @@ public class PortalControl : MonoBehaviour, IFocusable {
 	void Update () {
 
         user_distance = Vector3.Distance(myCube.transform.position, Camera.main.transform.position);
-        print(user_distance);
-        UIHiding(user_distance);
 
+        UIHiding(user_distance);
         UIFading(isUserClose);
         
     }

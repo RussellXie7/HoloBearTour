@@ -27,7 +27,7 @@ public class CubeSpin : MonoBehaviour {
     private void FloatAir() {
         if(increasing)
         {
-            transform.localPosition += new Vector3(0, Time.deltaTime * 0.2f, 0);
+            transform.localPosition += new Vector3(0, Time.deltaTime * 0.1f, 0);
             
             if(transform.localPosition.y >= maxY)
             {
