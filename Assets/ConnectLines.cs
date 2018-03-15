@@ -18,6 +18,8 @@ public class ConnectLines : MonoBehaviour, IInputClickHandler
     public Material material;
     public Transform anchor;
 
+    private float USER_DISTANCE_OFFSET = PortalControl.USER_DISTANCE_OFFSET;
+
     // Use this for initialization
     void Start () {
         isConnectingLines = false;
@@ -25,7 +27,7 @@ public class ConnectLines : MonoBehaviour, IInputClickHandler
 
         LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = material;
-        lineRenderer.widthMultiplier = 0.05f;
+        lineRenderer.widthMultiplier = 0.02f;
         lineRenderer.positionCount = 3;
 
         // A simple 2 color gradient with a fixed alpha of 1.0f.
@@ -45,30 +47,44 @@ public class ConnectLines : MonoBehaviour, IInputClickHandler
 
         if (isConnectingLines)
         {
-            if(lineRenderer.enabled == false)
-            {
-                lineRenderer.enabled = true;
-            }
+            float userToCube1 = Vector3.Distance(Camera.main.transform.position, cube1.position);
+            float userToCube2 = Vector3.Distance(Camera.main.transform.position, cube2.position);
 
-            lineRenderer.SetPosition(0, (anchor.position));
-            
-            if(Vector3.Distance(Camera.main.transform.position, cube1.position) > Vector3.Distance(Camera.main.transform.position, cube2.position))
+            lineRenderer.enabled = true;
+
+            if (userToCube1 > userToCube2)
             {
+                if (userToCube2 < USER_DISTANCE_OFFSET)
+                {
+                    lineRenderer.SetPosition(0, cube2.position);
+                }
+                else
+                {
+                    lineRenderer.SetPosition(0, (anchor.position));
+                }
+
                 lineRenderer.SetPosition(1, cube2.position);
                 lineRenderer.SetPosition(2, cube1.position);
+
             }
             else
             {
+                if(userToCube1 < USER_DISTANCE_OFFSET)
+                {
+                    lineRenderer.SetPosition(0, cube1.position);
+                }
+                else
+                {
+                    lineRenderer.SetPosition(0, (anchor.position));
+                }
+
                 lineRenderer.SetPosition(1, cube1.position);
                 lineRenderer.SetPosition(2, cube2.position);
             }
         }
         else
         {
-            if (lineRenderer.enabled)
-            {
-                lineRenderer.enabled = false;
-            }
+            lineRenderer.enabled = false;
         }
 	}
 

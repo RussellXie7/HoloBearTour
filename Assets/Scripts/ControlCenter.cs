@@ -49,10 +49,10 @@ public class ControlCenter : MonoBehaviour, ISourceStateHandler {
     }
 
     public void OnSourceDetected(SourceStateEventData eventData) {
-        EnableAllChildren();
+        // still no idea the current condition
     }
 
     public void OnSourceLost(SourceStateEventData eventData) {
-        DisableAllChildren();
+        // no idea the correct condition
     }
 }

@@ -10,6 +10,9 @@ public class PortalControl : MonoBehaviour, IFocusable {
     public GameObject basic_bear;
     public GameObject time_bear;
 
+    [HideInInspector]
+    public static float USER_DISTANCE_OFFSET = 0.7f;
+
     private float shiftOffset = 16.0f;
     private List<CanvasGroup> cg;
 
@@ -74,7 +77,7 @@ public class PortalControl : MonoBehaviour, IFocusable {
 	
     private void UIHiding(float distance)
     {
-        if(distance < 0.7f)
+        if(distance < USER_DISTANCE_OFFSET)
         {
             if (!isUserClose)
             {
