@@ -6,9 +6,8 @@ using HoloToolkit.Unity.InputModule;
 public class FixPortal : MonoBehaviour, IInputClickHandler
 {
 
-    public GameObject portal1;
-    public GameObject portal2;
-
+    public List<GameObject> portals;
+    
     private bool isFixed;
     private Color myColor;
 
@@ -23,8 +22,10 @@ public class FixPortal : MonoBehaviour, IInputClickHandler
     {
         if (!isFixed)
         {
-            portal1.GetComponent<HandDraggable>().IsDraggingEnabled = false;
-            portal2.GetComponent<HandDraggable>().IsDraggingEnabled = false;
+            foreach (GameObject portal in portals)
+            {
+                portal.GetComponent<HandDraggable>().IsDraggingEnabled = false;
+            }
 
             isFixed = true;
 
@@ -32,9 +33,11 @@ public class FixPortal : MonoBehaviour, IInputClickHandler
         }
         else
         {
-            portal1.GetComponent<HandDraggable>().IsDraggingEnabled = true;
-            portal2.GetComponent<HandDraggable>().IsDraggingEnabled = true;
-
+            foreach (GameObject portal in portals)
+            {
+                portal.GetComponent<HandDraggable>().IsDraggingEnabled = true;
+            }
+            
             isFixed = false;
 
             transform.GetComponent<MeshRenderer>().material.color = myColor;

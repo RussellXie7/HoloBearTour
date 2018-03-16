@@ -167,7 +167,7 @@ public class ColorShift : MonoBehaviour,IFocusable
         switch (command)
         {
             case "close":
-                if (closeInfo.alpha < 1)
+                if (closeInfo != null && closeInfo.alpha < 1)
                 {
                     closeInfo.alpha += shiftOffset / 204.0f;
                 }
@@ -182,7 +182,7 @@ public class ColorShift : MonoBehaviour,IFocusable
                 break;
 
             case "far":
-                if (closeInfo.alpha > 0)
+                if (closeInfo != null && closeInfo.alpha > 0)
                 {
                     closeInfo.alpha -= shiftOffset / 204.0f;
                 }
@@ -197,7 +197,7 @@ public class ColorShift : MonoBehaviour,IFocusable
                 break;
 
             case "decrease":
-                if (closeInfo.alpha > 0)
+                if (closeInfo != null && closeInfo.alpha > 0)
                 {
                     closeInfo.alpha -= shiftOffset / 204.0f;
                 }
@@ -222,7 +222,8 @@ public class ColorShift : MonoBehaviour,IFocusable
         switch (command)
         {
             case "close":
-                if (closeInfo.alpha < 1)
+
+                if (closeInfo!=null && closeInfo.alpha < 1)
                 {
                     closeInfo.alpha += shiftOffset / 204.0f;
                 }
@@ -236,7 +237,7 @@ public class ColorShift : MonoBehaviour,IFocusable
                 }
                 break;
             case "far":
-                if (closeInfo.alpha > 0)
+                if (closeInfo != null && closeInfo.alpha > 0)
                 {
                     closeInfo.alpha -= shiftOffset / 204.0f;
                 }
@@ -250,7 +251,7 @@ public class ColorShift : MonoBehaviour,IFocusable
                 }
                 break;
             case "decrease":
-                if (closeInfo.alpha > 0)
+                if (closeInfo != null && closeInfo.alpha > 0)
                 {
                     closeInfo.alpha -= shiftOffset / 204.0f;
                 }

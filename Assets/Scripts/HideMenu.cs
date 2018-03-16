@@ -26,7 +26,6 @@ public class HideMenu : MonoBehaviour, IInputClickHandler
         {
             transform.GetComponentInChildren<Text>().text = "Show";
             SendMessageUpwards("DisableAllChildren");
-            gameObject.SetActive(true);
         }
 
     }

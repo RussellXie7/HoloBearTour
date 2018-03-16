@@ -5,6 +5,8 @@ using HoloToolkit.Unity.InputModule;
 
 public class HideBearMesh : MonoBehaviour, IInputClickHandler{
 
+    public GameObject BearToHide;
+
     private GameObject myBear;
     private List<MeshRenderer> bearMeshes;
     private Color myColor;
@@ -13,7 +15,7 @@ public class HideBearMesh : MonoBehaviour, IInputClickHandler{
 
     // Use this for initialization
     void Start () {
-        myBear = GameObject.Find("bear").transform.Find("FixedBear").gameObject;
+        myBear = BearToHide;
         bearMeshes = new List<MeshRenderer>();
         isShow = true;
 

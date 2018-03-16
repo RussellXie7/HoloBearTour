@@ -4,11 +4,19 @@ using UnityEngine;
 using HoloToolkit.Unity;
 using HoloToolkit.Unity.InputModule;
 
+
+/// <summary>
+/// Need to adapt the script to be relevant to user and delete this one for portal
+/// </summary>
 public class PortalControl : MonoBehaviour, IFocusable {
 
     public GameObject x_ray_bear;
     public GameObject basic_bear;
     public GameObject time_bear;
+    public GameObject artist_bear;
+
+    public AudioClip beep;
+    private AudioSource myAudioSource;
 
     [HideInInspector]
     public static float USER_DISTANCE_OFFSET = 0.7f;
@@ -26,15 +34,18 @@ public class PortalControl : MonoBehaviour, IFocusable {
     public enum PortalTypeEnum {
         x_ray,
         time_period,
-        basic_info
+        basic_info,
+        artist
     }
 
     public PortalTypeEnum PortalType = PortalTypeEnum.basic_info;
-
     // Use this for initialization
     void Start () {
 
         myCube = transform.Find("CubeSpin").gameObject;
+        myAudioSource = gameObject.AddComponent<AudioSource>();
+        myAudioSource.playOnAwake = false;
+        myAudioSource.clip = beep;
 
         if (transform.childCount > 0)
         {
@@ -53,19 +64,51 @@ public class PortalControl : MonoBehaviour, IFocusable {
 
     private void ShowPortalBear(PortalTypeEnum portal)
     {
-        if(portal == PortalTypeEnum.x_ray)
+        if(portal == PortalTypeEnum.x_ray && PortalPlayerControl.currType != portal) 
         {
             basic_bear.SetActive(false);
             time_bear.SetActive(false);
+            artist_bear.SetActive(false);
             x_ray_bear.SetActive(true);
+
+            PortalPlayerControl.currType = portal;
+            myAudioSource.Play();
         }
 
-        if(portal == PortalTypeEnum.time_period)
+        if(portal == PortalTypeEnum.time_period && PortalPlayerControl.currType != portal)
         {
             basic_bear.SetActive(false);
             x_ray_bear.SetActive(false);
+            artist_bear.SetActive(false);
             time_bear.SetActive(true);
+
+            PortalPlayerControl.currType = portal;
+            myAudioSource.Play();
         }
+
+        if (portal == PortalTypeEnum.artist && PortalPlayerControl.currType != portal)
+        {
+            basic_bear.SetActive(false);
+            x_ray_bear.SetActive(false);
+            artist_bear.SetActive(true);
+            time_bear.SetActive(false);
+
+            PortalPlayerControl.currType = portal;
+            myAudioSource.Play();
+        }
+
+        if (portal == PortalTypeEnum.basic_info && PortalPlayerControl.currType != portal)
+        {
+            x_ray_bear.SetActive(false);
+            time_bear.SetActive(false);
+            basic_bear.SetActive(true);
+            artist_bear.SetActive(false);
+
+            PortalPlayerControl.currType = portal;
+            myAudioSource.Play();
+        }
+
+        
     }
 
     private void HidePortalBear()
@@ -106,7 +149,7 @@ public class PortalControl : MonoBehaviour, IFocusable {
 
                 isUserClose = false;
 
-                HidePortalBear();
+                // HidePortalBear();
             }
 
             

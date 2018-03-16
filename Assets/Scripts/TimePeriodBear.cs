@@ -5,6 +5,7 @@ using HoloToolkit.Unity.InputModule;
 
 public class TimePeriodBear : MonoBehaviour, IFocusable
 {
+    public bool focusShiftEnabled = true;
 
     private CanvasGroup cg;
     private bool isIncreasing;
@@ -17,23 +18,26 @@ public class TimePeriodBear : MonoBehaviour, IFocusable
 	
 	// Update is called once per frame
 	void Update () {
-        if (isIncreasing)
+        if (focusShiftEnabled)
         {
-            // canvas group should showup 
-            if (cg.alpha < 1)
+            if (isIncreasing)
             {
-                cg.alpha += canvasOffset;
-            }
+                // canvas group should showup 
+                if (cg.alpha < 1)
+                {
+                    cg.alpha += canvasOffset;
+                }
 
-        }
-        else
-        {
-            // canvas group should fade out
-            if (cg.alpha > 0)
+            }
+            else
             {
-                cg.alpha -= canvasOffset;
-            }
+                // canvas group should fade out
+                if (cg.alpha > 0)
+                {
+                    cg.alpha -= canvasOffset;
+                }
 
+            }
         }
     }
 

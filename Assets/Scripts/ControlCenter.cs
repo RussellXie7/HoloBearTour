@@ -5,6 +5,8 @@ using HoloToolkit.Unity.InputModule;
 
 public class ControlCenter : MonoBehaviour, ISourceStateHandler {
 
+    public GameObject exemptedButton;
+
     private List<GameObject> allChildren;
 
 #if UNITY_EDITOR
@@ -21,7 +23,10 @@ public class ControlCenter : MonoBehaviour, ISourceStateHandler {
 
         foreach (Transform c in transform)
         {
-            allChildren.Add(c.gameObject);
+            if (c.gameObject != exemptedButton)
+            {
+                allChildren.Add(c.gameObject);
+            }
         }
 
         // DisableAllChildren();
@@ -36,7 +41,21 @@ public class ControlCenter : MonoBehaviour, ISourceStateHandler {
     {
         foreach(GameObject g in allChildren)
         {
-            g.SetActive(false);
+            foreach(MeshRenderer mesh in g.GetComponentsInChildren<MeshRenderer>())
+            {
+                mesh.enabled = false;
+            }
+
+            foreach(Collider cd in g.GetComponentsInChildren<Collider>())
+            {
+                cd.enabled = false;
+            }
+
+            foreach (Canvas c in g.GetComponentsInChildren<Canvas>())
+            {
+                c.enabled = false;
+            }
+
         }
     }
 
@@ -44,7 +63,22 @@ public class ControlCenter : MonoBehaviour, ISourceStateHandler {
     {
         foreach (GameObject g in allChildren)
         {
-            g.SetActive(true);
+            foreach (MeshRenderer mesh in g.GetComponentsInChildren<MeshRenderer>())
+            {
+                mesh.enabled = true;
+            }
+
+            foreach (Collider cd in g.GetComponentsInChildren<Collider>())
+            {
+                cd.enabled = true;
+            }
+
+            foreach (Canvas c in g.GetComponentsInChildren<Canvas>())
+            {
+                c.enabled = true;
+            }
+
+
         }
     }
 
