@@ -49,7 +49,7 @@ public class XRay_Bear : MonoBehaviour, IFocusable {
             // canvas group should showup while bear fade out
             if(cg.alpha < 1)
             {
-                cg.alpha += canvasOffset;
+                //cg.alpha += canvasOffset;
             }
 
         }
@@ -68,7 +68,7 @@ public class XRay_Bear : MonoBehaviour, IFocusable {
             // canvas group should fade out
             if (cg.alpha > 0)
             {
-                cg.alpha -= canvasOffset;
+                //cg.alpha -= canvasOffset;
             }
 
         }
