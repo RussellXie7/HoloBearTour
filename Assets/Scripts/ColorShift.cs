@@ -6,6 +6,8 @@ using HoloToolkit.Unity.InputModule;
 
 public class ColorShift : MonoBehaviour,IFocusable
 {
+    public bool constantOn = false;
+
     private float shiftOffset = 16.0f;
     private float USER_DISTANCE_VALUE = 3f;
 
@@ -77,7 +79,7 @@ public class ColorShift : MonoBehaviour,IFocusable
         }
         else
         {
-            shiftValue += shiftOffset;
+            shiftValue += shiftOffset;  
             if(shiftValue >= 204)
             {
                 shiftValue = 204;
@@ -95,67 +97,70 @@ public class ColorShift : MonoBehaviour,IFocusable
             }
         }
 
-        if (sp != null)
+        if (!constantOn)
         {
-            SpriteRenderer curr_sp = null;
-
-            // if we are using sprite on this body part
-            if (sp.Count > 0)
+            if (sp != null)
             {
-                curr_sp = sp[0];
-                user_distance = Vector3.Distance(Camera.main.transform.position, curr_sp.transform.position);
+                SpriteRenderer curr_sp = null;
 
-
-                if (isIncreasing)
+                // if we are using sprite on this body part
+                if (sp.Count > 0)
                 {
-                    if (user_distance != 999999 && user_distance < USER_DISTANCE_VALUE)
+                    curr_sp = sp[0];
+                    user_distance = Vector3.Distance(Camera.main.transform.position, curr_sp.transform.position);
+
+
+                    if (isIncreasing)
                     {
-                        AdjustSPAlpha("close");
-                    }
-                    else if (user_distance != 999999)
-                    {
-                        AdjustSPAlpha("far");
+                        if (user_distance != 999999 && user_distance < USER_DISTANCE_VALUE)
+                        {
+                            AdjustSPAlpha("close");
+                        }
+                        else if (user_distance != 999999)
+                        {
+                            AdjustSPAlpha("far");
+                        }
+                        else
+                        {
+                            Debug.Log("Error Happened, shoud not enter here in SP.");
+                        }
                     }
                     else
                     {
-                        Debug.Log("Error Happened, shoud not enter here in SP.");
+                        AdjustSPAlpha("decrease");
                     }
-                }
-                else
-                {
-                    AdjustSPAlpha("decrease");
                 }
             }
-        }
 
-        if (cg != null)
-        {
-            CanvasGroup curr_cg = null;
-
-            // if we are usnig cg
-            if (cg.Count > 0)
+            if (cg != null)
             {
-                curr_cg = cg[0];
-                user_distance = Vector3.Distance(Camera.main.transform.position, curr_cg.transform.GetChild(0).position);
+                CanvasGroup curr_cg = null;
 
-                if (isIncreasing)
+                // if we are usnig cg
+                if (cg.Count > 0)
                 {
-                    if (user_distance != 999999 && user_distance < USER_DISTANCE_VALUE)
+                    curr_cg = cg[0];
+                    user_distance = Vector3.Distance(Camera.main.transform.position, curr_cg.transform.GetChild(0).position);
+
+                    if (isIncreasing)
                     {
-                        AdjustCGAlpha("close");
-                    }
-                    else if (user_distance != 999999)
-                    {
-                        AdjustCGAlpha("far");
+                        if (user_distance != 999999 && user_distance < USER_DISTANCE_VALUE)
+                        {
+                            AdjustCGAlpha("close");
+                        }
+                        else if (user_distance != 999999)
+                        {
+                            AdjustCGAlpha("far");
+                        }
+                        else
+                        {
+                            Debug.Log("Error Happened, shoud not enter here. in CG");
+                        }
                     }
                     else
                     {
-                        Debug.Log("Error Happened, shoud not enter here. in CG");
+                        AdjustCGAlpha("decrease");
                     }
-                }
-                else
-                {
-                    AdjustCGAlpha("decrease");
                 }
             }
         }

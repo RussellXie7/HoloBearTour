@@ -4,14 +4,16 @@ using UnityEngine;
 using HoloToolkit.Unity.InputModule;
 public class BearControl : MonoBehaviour,IInputClickHandler
 {
+    public string dragObjectName = "bear";
+    public string scaleObjectName = "bear";
 
     private HandDraggable drag;
     private ExtendedManipulation scale;
     
 	// Use this for initialization
 	void Start () {
-        drag = GameObject.Find("bear").GetComponent<HandDraggable>();
-        scale = GameObject.Find("bear").GetComponent<ExtendedManipulation>();
+        drag = GameObject.Find(dragObjectName).GetComponent<HandDraggable>();
+        scale = GameObject.Find(scaleObjectName).GetComponent<ExtendedManipulation>();
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
