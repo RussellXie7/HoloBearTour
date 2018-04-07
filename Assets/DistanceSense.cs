@@ -29,7 +29,7 @@ public class DistanceSense : MonoBehaviour {
 
         // debugText.text = text;
 
-        float new_size = 0.003f * user_distance + 0.001f;
+        float new_size = 0.0005f * user_distance + 0.001f;
 
         if(new_size > 0.0123f)
         {

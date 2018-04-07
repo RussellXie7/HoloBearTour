@@ -19,9 +19,12 @@ public class HideBearMesh : MonoBehaviour, IInputClickHandler{
         bearMeshes = new List<MeshRenderer>();
         isShow = true;
 
-        foreach(MeshRenderer mr in myBear.GetComponentsInChildren<MeshRenderer>())
+        foreach(MeshRenderer mr in myBear.GetComponentsInChildren<MeshRenderer>(true))
         {
-            bearMeshes.Add(mr);
+            if (mr.gameObject.tag != "InnerStructure")
+            {
+                bearMeshes.Add(mr);
+            }
         }
 
         myColor = transform.GetComponent<MeshRenderer>().material.color;

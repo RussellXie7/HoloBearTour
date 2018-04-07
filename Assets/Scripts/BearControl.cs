@@ -14,12 +14,25 @@ public class BearControl : MonoBehaviour,IInputClickHandler
 	void Start () {
         drag = GameObject.Find(dragObjectName).GetComponent<HandDraggable>();
         scale = GameObject.Find(scaleObjectName).GetComponent<ExtendedManipulation>();
+
+        drag.SetDragging(false);
+        scale.SetScaling(false);
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
+        // disable -> drag mode with rotation
+        if (!drag.IsDraggingEnabled && !scale.IsScalingEnabled)
+        {
+            drag.SetDragging(true);
+            drag.RotationMode = HandDraggable.RotationModeEnum.OrientTowardUserAndKeepUpright;
+            scale.SetScaling(false);
+
+            GetComponent<MeshRenderer>().material.color = Color.red;
+
+        }
         // drag mode with rotation -> drag mode without rotation
-        if (drag.IsDraggingEnabled && drag.RotationMode == HandDraggable.RotationModeEnum.OrientTowardUserAndKeepUpright)
+        else if (drag.IsDraggingEnabled && drag.RotationMode == HandDraggable.RotationModeEnum.OrientTowardUserAndKeepUpright)
         {
             drag.RotationMode = HandDraggable.RotationModeEnum.LockObjectRotation;
 
@@ -33,14 +46,13 @@ public class BearControl : MonoBehaviour,IInputClickHandler
 
             GetComponent<MeshRenderer>().material.color = Color.blue;
         }
-        // scale mode -> drag mode with rotation
+        // scale mode -> disable
         else
         {
-            drag.SetDragging(true);
-            drag.RotationMode = HandDraggable.RotationModeEnum.OrientTowardUserAndKeepUpright;
+            drag.SetDragging(false);
             scale.SetScaling(false);
 
-            GetComponent<MeshRenderer>().material.color = Color.red;
+            GetComponent<MeshRenderer>().material.color = Color.white;
         }
     }
     // Update is called once per frame
