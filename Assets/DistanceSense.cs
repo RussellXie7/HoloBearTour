@@ -29,11 +29,11 @@ public class DistanceSense : MonoBehaviour {
 
         // debugText.text = text;
 
-        float new_size = 0.0005f * user_distance + 0.001f;
+        float new_size = 0.04f * user_distance + 0.075f;
 
-        if(new_size > 0.0123f)
+        if (new_size > 0.8f)
         {
-            new_size = 0.0123f;
+            new_size = 0.8f;
         }
 
         transform.localScale = new Vector3(new_size, new_size, new_size);

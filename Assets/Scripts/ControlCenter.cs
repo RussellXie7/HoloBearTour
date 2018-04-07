@@ -9,15 +9,10 @@ public class ControlCenter : MonoBehaviour, ISourceStateHandler {
 
     private List<GameObject> allChildren;
 
-#if UNITY_EDITOR
-    void Awake()
-    {
-        Application.targetFrameRate = 30;
-    }
-#endif
-
     // Use this for initialization
     void Start () {
+
+        Application.targetFrameRate = 60;
 
         allChildren = new List<GameObject>();
 
