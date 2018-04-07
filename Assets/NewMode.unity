@@ -3400,6 +3400,22 @@ Prefab:
       propertyPath: artist_bear
       value: 
       objectReference: {fileID: 555621926}
+    - target: {fileID: 4999976005236674, guid: 453a685aff7b48748af535cacc247a3e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999976005236674, guid: 453a685aff7b48748af535cacc247a3e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.835
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860923546753132, guid: 453a685aff7b48748af535cacc247a3e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860923546753132, guid: 453a685aff7b48748af535cacc247a3e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.878
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 453a685aff7b48748af535cacc247a3e, type: 2}
   m_IsPrefabParent: 0
@@ -10170,8 +10186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.0478, y: 350}
-  m_SizeDelta: {x: 928.09, y: 136.1}
+  m_AnchoredPosition: {x: 60, y: 344}
+  m_SizeDelta: {x: 1099.5, y: 136.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433169538
 MonoBehaviour:
@@ -10206,7 +10222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tim Hawkinson (1960 - )
+  m_Text: Tim Hawkinson (1960 - Now)
 --- !u!222 &1433169539
 CanvasRenderer:
   m_ObjectHideFlags: 0
