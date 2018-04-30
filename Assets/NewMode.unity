@@ -13244,51 +13244,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 223158094630671534, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1947626781}
-    - target: {fileID: 223624590325912976, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1947626781}
     - target: {fileID: 223783851884295646, guid: f4e6a9d50a597f947b8098d8178f9674,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1947626781}
-    - target: {fileID: 223064090864647810, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1947626781}
-    - target: {fileID: 223249881592099846, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1947626781}
-    - target: {fileID: 223305281079325648, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1947626781}
-    - target: {fileID: 223803956017616690, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1947626781}
-    - target: {fileID: 223080662732052474, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1947626781}
-    - target: {fileID: 114690832445956476, guid: f4e6a9d50a597f947b8098d8178f9674,
-        type: 2}
-      propertyPath: BearToHide
-      value: 
-      objectReference: {fileID: 1818021595}
     - target: {fileID: 114143308354380122, guid: f4e6a9d50a597f947b8098d8178f9674,
         type: 2}
       propertyPath: cubes.Array.data[0]
@@ -13314,26 +13274,26 @@ Prefab:
       propertyPath: anchor
       value: 
       objectReference: {fileID: 675213152}
-    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+    - target: {fileID: 223803956017616690, guid: f4e6a9d50a597f947b8098d8178f9674,
         type: 2}
-      propertyPath: x_ray_bear
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1361725558}
-    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+      objectReference: {fileID: 1947626781}
+    - target: {fileID: 114690832445956476, guid: f4e6a9d50a597f947b8098d8178f9674,
         type: 2}
-      propertyPath: basic_bear
+      propertyPath: BearToHide
       value: 
-      objectReference: {fileID: 157660758}
-    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+      objectReference: {fileID: 1818021595}
+    - target: {fileID: 223249881592099846, guid: f4e6a9d50a597f947b8098d8178f9674,
         type: 2}
-      propertyPath: time_bear
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 885635605}
-    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+      objectReference: {fileID: 1947626781}
+    - target: {fileID: 223305281079325648, guid: f4e6a9d50a597f947b8098d8178f9674,
         type: 2}
-      propertyPath: artist_bear
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 555621926}
+      objectReference: {fileID: 1947626781}
     - target: {fileID: 114550983269118152, guid: f4e6a9d50a597f947b8098d8178f9674,
         type: 2}
       propertyPath: portals.Array.data[0]
@@ -13354,6 +13314,51 @@ Prefab:
       propertyPath: portals.Array.data[3]
       value: 
       objectReference: {fileID: 2083785723}
+    - target: {fileID: 223624590325912976, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1947626781}
+    - target: {fileID: 223740300932570060, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1947626781}
+    - target: {fileID: 223080662732052474, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1947626781}
+    - target: {fileID: 223064090864647810, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1947626781}
+    - target: {fileID: 223158094630671534, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1947626781}
+    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: x_ray_bear
+      value: 
+      objectReference: {fileID: 1361725558}
+    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: basic_bear
+      value: 
+      objectReference: {fileID: 157660758}
+    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: time_bear
+      value: 
+      objectReference: {fileID: 885635605}
+    - target: {fileID: 114380174674441058, guid: f4e6a9d50a597f947b8098d8178f9674,
+        type: 2}
+      propertyPath: artist_bear
+      value: 
+      objectReference: {fileID: 555621926}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4e6a9d50a597f947b8098d8178f9674, type: 2}
   m_IsPrefabParent: 0
@@ -15003,7 +15008,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.85
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 16
   orthographic: 0
