@@ -16,9 +16,9 @@ HoloBearTour is a proof-of-concept application of our research that is intended 
 ## Try it Out
 
 ### Prerequisites
-
+```
 What things you need to install the software and how to install them
-
+```
 #### HoloLens Example
 
 * [Unity 2017.3 or up](https://unity3d.com/get-unity/download/archive)
