@@ -4,6 +4,8 @@ This is originally a research study for information visualization in mixed reali
 * Find our full experience demo on HoloLens at: https://www.youtube.com/watch?v=5I4hfqg2DUo 
 * Check out the article of this project on Medium: https://medium.com/@wanze.xie/holobear-tour-mixed-reality-app-a85c13955b49
 
+![alt text](https://cdn-images-1.medium.com/max/800/1*eOpSeXY4U0n6OfAvbMksFw.jpeg)
+
 ## Getting Started
 
 ### Prerequisites
