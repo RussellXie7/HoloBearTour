@@ -8,9 +8,9 @@ An augmented reality experience that guides you to explore UCSD's Stuart Collect
 ![alt text](https://cdn-images-1.medium.com/max/800/1*eOpSeXY4U0n6OfAvbMksFw.jpeg)
 
 ## Backgrounds
-This is originally a research study for information visualization in mixed reality launched by Wanze and Dr. Ali Sarvghad at Human-Centered and Ubiquitous Lab at UCSD. We are exploring embedded visualization, speculative design, implicit interaction, eco-feedback in smart home design, etc. 
+This is originally a research study for information visualization in mixed reality launched by Wanze and Dr. Ali Sarvghad at Human-Centered and Ubiquitous Computing Lab at UCSD. We are exploring embedded visualization, speculative design, implicit interaction, eco-feedback, smart home design, etc.
 
-HoloBearTour is a proof-of-concept application of our research that is intended to help UCSD visitors understand and learn about the culture and history of UCSD's Stuart Collection Statue, and we are using the Hawkinson's Bear as an example. Here we are including the mixed reality version of the application for HoloLens on the UWP platform and the application for the iOS platform using ARkit.
+HoloBearTour is a proof-of-concept application of our research and is intended to help UCSD visitors understand and learn about the culture and history of UCSD's Stuart Collection Statue, and we are using the Hawkinson's Bear as an example. Here we are including the mixed reality version of the application for HoloLens on the UWP platform and the application for the iOS platform using ARkit.
 
 
 ## Try it Out
